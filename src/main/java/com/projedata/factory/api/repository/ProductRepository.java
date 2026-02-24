@@ -11,7 +11,7 @@ public interface ProductRepository extends JpaRepository<@NonNull Product, @NonN
 
     boolean existsByCode(String code);
 
-    @Query("SELECT p FROM Product p LEFT JOIN FETCH p.compositions LEFT JOIN FETCH c.rawMaterial")
+    @Query("SELECT p FROM Product p LEFT JOIN FETCH p.compositions c LEFT JOIN FETCH c.rawMaterial")
     List<Product> findAllWithCompositions();
 
 }
