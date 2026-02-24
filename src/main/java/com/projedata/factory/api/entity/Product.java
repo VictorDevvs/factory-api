@@ -1,5 +1,6 @@
 package com.projedata.factory.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +30,7 @@ public class Product {
     @Column(nullable = false)
     private BigDecimal saleValue;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProductComposition> compositions = new ArrayList<>();
 }
