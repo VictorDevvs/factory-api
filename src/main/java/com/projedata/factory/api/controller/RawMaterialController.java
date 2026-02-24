@@ -23,7 +23,7 @@ public class RawMaterialController {
         return ResponseEntity.ok(service.findAll());
     }
 
-    @GetMapping("/{id]")
+    @GetMapping("/{id}")
     public ResponseEntity<@NonNull RawMaterial> findById(@PathVariable Long id) {
         return  ResponseEntity.ok(service.findById(id));
     }
