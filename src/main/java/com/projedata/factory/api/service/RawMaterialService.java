@@ -46,7 +46,7 @@ public class RawMaterialService {
         return rawMaterialRepository.save(rawMaterial);
         }
 
-    public void deleteById(Long id) {
+    public void delete(Long id) {
         findById(id);
         rawMaterialRepository.deleteById(id);
     }
