@@ -243,7 +243,8 @@ Entidades JPA carregam anotações de banco e podem ter referências circulares 
 
 ---
 
-## Autor
+## Victor Santos
 
 Desenvolvido como teste técnico para vaga de Desenvolvedor Fullstack Júnior.
+
 
