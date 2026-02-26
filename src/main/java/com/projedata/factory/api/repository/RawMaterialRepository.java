@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface RawMaterialRepository extends JpaRepository<@NonNull RawMaterial, @NonNull Long> {
 
     boolean existsBycode(String code);
-    Optional<RawMaterial> findBycode(String code);
+    Optional<RawMaterial> findByCode(String code);
 
 }
