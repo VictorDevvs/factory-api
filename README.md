@@ -2,7 +2,7 @@
 
 API REST para gerenciamento de insumos e otimização de produção industrial.
 
-Construída com **Spring Boot 3**, **Java 21** e **PostgreSQL** (H2 para desenvolvimento).
+Construída com **Spring Boot 4**, **Java 21** e **PostgreSQL** (H2 para desenvolvimento).
 
 ---
 
@@ -243,6 +243,8 @@ Entidades JPA carregam anotações de banco e podem ter referências circulares 
 
 ---
 
-## Autor
+## Victor Santos
 
 Desenvolvido como teste técnico para vaga de Desenvolvedor Fullstack Júnior.
+
+
