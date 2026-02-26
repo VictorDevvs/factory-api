@@ -18,6 +18,7 @@ Construída com **Spring Boot 4**, **Java 21** e **PostgreSQL** (H2 para desenvo
 | Validação | Jakarta Bean Validation |
 | Boilerplate | Lombok |
 | Testes | JUnit 5 + Mockito + AssertJ |
+| Importação | OpenCSV |
 
 ---
 
@@ -96,6 +97,7 @@ src/
 │   │   └── ProductionSuggestionResponse  # Objeto de saída da API
 |   |   └── ProductRequest                # Objeto de entrada da API
 |   |   └── RawMaterialRequest            # Objeto de entrada da API
+|   |   └── CsvImportResponse             # Objeto de saída da API
 │   ├── entity/
 │   │   ├── RawMaterial.java              # Entidade: matéria-prima
 │   │   ├── Product.java                  # Entidade: produto
@@ -108,6 +110,7 @@ src/
 │   │   ├── ProductRepository.java        # Contém query com JOIN FETCH para evitar N+1
 │   │   └── ProductCompositionRepository.java
 │   └── service/
+|       ├──   CsvImportService
 │       ├── RawMaterialService.java
 │       ├── ProductService.java
 │       └── ProductionOptimizationService.java  # Algoritmo greedy de otimização
@@ -128,6 +131,7 @@ src/
 | `GET` | `/api/v1/raw-materials` | Lista todas |
 | `GET` | `/api/v1/raw-materials/{id}` | Busca por ID |
 | `POST` | `/api/v1/raw-materials` | Cria nova |
+| `POST` | `api/v1/raw-materials/import/simple` | Importa csv |
 | `PUT` | `/api/v1/raw-materials/{id}` | Atualiza |
 | `DELETE` | `/api/v1/raw-materials/{id}` | Remove |
 
@@ -246,5 +250,6 @@ Entidades JPA carregam anotações de banco e podem ter referências circulares 
 ## Victor Santos
 
 Desenvolvido como teste técnico para vaga de Desenvolvedor Fullstack Júnior.
+
 
 
