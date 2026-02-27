@@ -9,12 +9,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.mock.web.MockMultipartFile;
-
 import java.math.BigDecimal;
 import java.util.Optional;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -81,7 +78,7 @@ class CsvImportServiceTest {
 
     @Test
     void shouldSkipLineWithMissingColumns() {
-        String csv = "code,name,stockQuantity,unit\nFL001,Flour\n"; // only 2 columns
+        String csv = "code,name,stockQuantity,unit\nFL001,Flour\n";
         MockMultipartFile file = mockFile(csv);
 
         CsvImportResponse response = service.importRawMaterials(file);
