@@ -110,7 +110,7 @@ src/
 │   │   ├── ProductRepository.java        # Contém query com JOIN FETCH para evitar N+1
 │   │   └── ProductCompositionRepository.java
 │   └── service/
-|       ├──   CsvImportService
+|       ├── CsvImportService.java
 │       ├── RawMaterialService.java
 │       ├── ProductService.java
 │       └── ProductionOptimizationService.java  # Algoritmo greedy de otimização
@@ -118,6 +118,7 @@ src/
 └── test/java/com/factory/
     └── service/
         └── ProductionOptimizationServiceTest.java
+        └── CsvImportServiceTest.java
 ```
 
 ---
